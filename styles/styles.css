@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/ptsans-400.woff2) format("woff2");
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(fonts/ptsans-700.woff2) format("woff2");
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -36,15 +36,16 @@ body {
 }
 
 .navigation-link {
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
   text-transform: capitalize;
   text-decoration: none;
-  font-weight: 700;
 }
 
 .navigation-link-buttom {
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
@@ -52,23 +53,22 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 .hero-logo {
   color: #000000;
   background-color: #ffffff;
-  background-image: url("/images/index-background.jpg");
+  background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
 }
 
 .tagline-1 {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  font-weight: 700;
   text-align: center;
 }
 
@@ -92,18 +92,18 @@ body {
 }
 
 .advantages-item {
-  background-color: #82B3D3;
   color: #FFFFFF;
+  background-color: #82B3D3;
 }
 
 .advantages-item-advantages-item-ultra-light {
-  background: rgba(131, 179, 211, 0.12);
   color: #000000;
+  background: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-advantages-item-light {
-  background: rgba(131, 179, 211, 0.2);
   color: #000000;
+  background: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item-ultra-light p,
@@ -118,10 +118,10 @@ body {
 }
 
 .tagline-2 {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  font-weight: 700;
   text-align: center;
 }
 
@@ -155,10 +155,10 @@ body {
 }
 
 .search-question {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  font-weight: 700;
   text-align: center;
 }
 
@@ -170,11 +170,11 @@ body {
 .button-search {
   font-size: 20px;
   line-height: 36px;
-  text-transform: uppercase;
   color: #FFFFFF;
   background-color: #756157;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
   margin: 0 auto;
   display: block;
 }
@@ -182,33 +182,33 @@ body {
 .subscribe {
   color: #ffffff;
   background-color: #000000;
-  background-image: url("/images/subscribe-background.jpg");
+  background-image: url("../images/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
 }
 
 .subscribe-no-bg {
-  background-image: none;
-  background-color: #ffffff;
   color: #000000;
+  background-color: #ffffff;
+  background-image: none;
   text-align: center;
 }
 
 .subscribe-title {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 .button-sub {
   font-family: 'PT Sans', sans-serif;
-  color: #ffffff;
-  background-color: #82B3D3;
+  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  font-weight: 700;
+  color: #ffffff;
+  background-color: #82B3D3;
   border: none;
   text-transform: uppercase;
 }
@@ -224,9 +224,9 @@ body {
 }
 
 .contact-phone {
-  color: #000000;
   font-size: 40px;
   line-height: 40px;
+  color: #000000;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -235,7 +235,7 @@ body {
 .catalog-menu {
   color: #ffffff;
   background-color: #000000;
-  background-image: url("/images/filter-background.jpg");
+  background-image: url("../images/filter-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -272,11 +272,11 @@ body {
 
 .button-submit {
   font-family: 'PT Sans', sans-serif;
-  color: #ffffff;
-  background-color: #82B3D3;
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 700;
+  color: #ffffff;
+  background-color: #82B3D3;
   text-align: center;
   border: none;
   text-transform: uppercase;
@@ -284,11 +284,11 @@ body {
 
 .button-reset {
   font-family: 'PT Sans', sans-serif;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0);
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
   text-transform: uppercase;
   border: none;
@@ -330,10 +330,10 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
   color: #FFFFFF;
   background-color: #756157;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -341,10 +341,10 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
   color: #FFFFFF;
   background-color: #82B3D3;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
