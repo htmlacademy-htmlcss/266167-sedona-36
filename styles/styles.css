@@ -14,22 +14,41 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #000000;
   background: #FFFFFF;
-  font-weight: 400;
+
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .navigation-list {
+  width: 600px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .navigation-user {
+  width: 300px;
+  margin-left: auto;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -54,6 +73,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {}
 
 .hero-logo {
   color: #000000;
