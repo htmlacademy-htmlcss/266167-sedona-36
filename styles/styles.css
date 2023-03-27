@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -52,13 +58,15 @@ body {
 
 .navigation {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 70px;
+  gap: 30px;
 }
 
 .navigation-list {
   width: 550px;
   margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -73,7 +81,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
-
 }
 
 .navigation-link {
@@ -81,14 +88,8 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-  text-transform: capitalize;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 12px;
-}
-
-.navigation-item-list {
   padding: 20px 16px;
+  text-decoration: none;
 }
 
 .navigation-link-buttom {
@@ -102,7 +103,6 @@ body {
   text-transform: uppercase;
   margin-left: 20px;
   padding: 8px 34px;
-  height: 36px;
   box-sizing: border-box;
   border-radius: 4px;
   border: 0;
@@ -114,7 +114,6 @@ body {
   flex-grow: 1;
 }
 
-.page-container {}
 
 .hero-logo {
   color: #000000;
@@ -161,6 +160,43 @@ body {
   margin: 0 auto;
 }
 
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-auto-rows: minmax(385px, auto);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advantages-item.wide {
+  grid-column: 1/4;
+  flex-direction: row;
+  color: #FFF;
+  background-color: #82B3D3;
+}
+
+.advantages-item.wide-reverse {
+  grid-column: 1/4;
+  flex-direction: row-reverse;
+  color: #FFF;
+  background-color: #82B3D3;
+}
+
+.advantages-item-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
+}
+
 .advantages-title {
   font-weight: 700;
   font-size: 24px;
@@ -169,41 +205,31 @@ body {
   text-align: center;
 }
 
+.advantages-photo {
+  display: block;
+}
+
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
 }
 
-.advantages-item {
-  width: 100%;
-  color: #FFFFFF;
-  background-color: #82B3D3;
-}
-
-.advantages-item-advantages-item-ultra-light {
-  width: 33.33%;
+.advantages-item.advantages-item-ultra-light {
   color: #000000;
   background: rgba(131, 179, 211, 0.12);
+  padding: 0 85px;
 }
 
-.advantages-item-advantages-item-light {
-  width: 33.33%;
+.advantages-item.advantages-item-light {
   color: #000000;
   background: rgba(131, 179, 211, 0.2);
+  padding: 0 85px;
 }
 
-.advantages-item-ultra-light p,
-.advantages-item-advantages-item-light p {
+.advantages-item.ultra-light p,
+.advantages-item.advantages-item-light p {
   color: #333333;
-}
-
-.advantages-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .tagline-2 {
@@ -229,7 +255,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .recommendations-title {
@@ -252,6 +277,8 @@ body {
 .recommendations-item {
   background: rgba(131, 179, 211, 0.12);
   flex-grow: 1;
+  padding: 241px 85px 81px 85px;
+  width: 400px;
 }
 
 .recommendations-item-white {
@@ -286,12 +313,8 @@ body {
 .search-description {
   color: #333333;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 0 54px 0;
   padding: 0;
-}
-
-.search-description-2 {
-  margin: 0 0 106px 0;
 }
 
 .button-search {
@@ -544,17 +567,24 @@ body {
 
 .catalog-card {
   margin: 0;
-  padding: 20px;
+  padding: 20px 18px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 340px;
+  column-gap: 20px;
 }
 
 .catalog-card-image {
-  margin-bottom: 16px;
+  display: block;
 }
 
 .catalog-card-link {
-  margin: 0;
+  margin-bottom: 16px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .catalog-card-title {
@@ -562,12 +592,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   margin: 0 0 16px 0;
-}
-
-.card-type-price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
 .catalog-card-type {
@@ -575,6 +600,9 @@ body {
   line-height: 21px;
   color: #333333;
   margin: 0 0 16px 0;
+  padding: 0;
+  width: 50%;
+  max-width: 140px;
 }
 
 .catalog-card-price {
@@ -582,6 +610,10 @@ body {
   line-height: 21px;
   color: #333333;
   margin: 0 0 16px 0;
+  padding: 0;
+  width: 50%;
+  max-width: 140px;
+  text-align: right;
 }
 
 .catalog-card-button-about-button {
@@ -593,9 +625,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 20px;
+  margin: 0 0 16px 0;
   padding: 8px 26px;
-  border-radius: 4px
+  border-radius: 4px;
+  width: 140px;
 }
 
 .catalog-card-button-favorites-button {
@@ -607,8 +640,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  margin: 0 0 16px 0;
   padding: 8px 20px;
-  border-radius: 4px
+  border-radius: 4px;
+  width: 140px;
 }
 
 .catalog-card-raiting {
@@ -616,6 +651,13 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #F2F2F2;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
+  width: 140px;
 }
 
 .pagination {
